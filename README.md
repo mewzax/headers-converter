@@ -22,3 +22,15 @@ Usage:
 * Put headers in `headers.txt`
 * Run `main.py`
 * Get your headers in `output.txt`
+
+Example:
+
+```py
+import httpx
+resp = httpx.get('https://api.ipify.org',
+headers = {
+	# headers here
+	"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36",
+})
+print(resp.text)
+```
