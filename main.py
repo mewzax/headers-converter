@@ -4,6 +4,7 @@ output = open('output.txt', "w")
 output.write("headers = {\n")
 
 for header in headers:
+  header = header.replace('"', '\"')
   header = "\t\""+header.split(":")[0]+"\""+": "+"\""+header.split(":")[1].strip()+"\",\n"
   output.write(header)
   
